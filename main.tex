@@ -1,0 +1,238 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+
+
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{Tolga Paksoy}{December 11, 1991}{Last update on \today}
+
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\begin{multicols}{2}
+\noindent\href{mailto:tlgpksy.at.gmail.dot.com}{tlgpksy\mbox{}@\mbox{}gmail.com}\sbull
+\textsmaller{+}31.639106153
+\\
+Rotterdam\sbull
+The Netherlands
+\\
+{\href{https://github.com/tolgap}{Github: github.com/tolgap}}
+\end{multicols}
+
+\spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Summary}  % a root section title
+
+\vspace{-1.2em} % vertical spacing
+\begin{multicols}{2} % 2 column environment
+\noindent \emph{A curious individual with an interest in new programming languages/techniques and a passion for clean, readable and maintainable software (code).}
+\smallskip
+In his young years, Tolga was facinated with development of \acr{3D} games. Games finally had better graphics and more depth. This sparkled his thought and imagination on how things are programmed for use on a computer.
+
+Once introduced to computer science in High School, Tolga set out to rewrite the system of exam second-chances written in \acr{PHP}.
+
+Graduated from High School, soon came the concepts of frameworks and libraries. Tolga was introduced to all the possible programming languages, like Java, Javascript, PHP and Assembly, to choose from. Learning more and more languages, his favourites became Ruby, Haskell and Scala. These languages helped him to think on a more abstract level when coding and encouraged to write clean, readable code.
+
+These days, Tolga works, together with a companion, for his own company. Working on his own projects, with companies based in The Netherlands, trying to build their brands for the online world.
+
+Current most interesting research topic for Tolga is: \emph{making recurring businesses possible in Shopify}. Shopify inherently focuses fully on one-time Credit Card payments. In Europe, many residents do not own Credit Cards, and recurring businesses rely on storing banking information, which cannot be stored in Shopify. A lot of research has already been done on this topic by Tolga.
+\end{multicols}
+
+\spacedhrule{0em}{-0.4em}
+
+\roottitle{Experience}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://www.paramander.com}{Paramander}}
+  {\textsc{Delft, The Netherlands}} {%
+  \headedsubsection
+    {Co-owner and developer}
+    {Apr \apo16 -- Now}
+    {\bodytext{Paramander is aiming to become a company with a solution for any online problem. Technologies such as \emph{Ruby on Rails}, \emph{Laravel}, \emph{Haskell}, \emph{Elm} are of daily business. From strategy, until development, Paramander always aims to solve customer-centric issues together with their customers. During his time at Paramander, Tolga is a co-owner with his business partner Mats Rietdijk. Doing freelance work, and own projects to build up a company portfolio.}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://www.lendahand.com}{Project: Lendahand}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Backend Developer}
+    {June \apo19 -- Now}
+    {\bodytext{Lendahand is an online investment platform where socially conscious investors can invest in entrepreneurs and sustainable initiatives in emerging countries. \\
+    Their platform runs on two \emph{Ruby on Rails} sites. A customer-facing frontend application and an administrative backoffice application.
+    \\
+    An extensive API was built for Lendahand in order to allow third party sites to use the same investment platform. The platform was already well tested with a code coverage of 93\%. The same code coverage was required when adding the investment API to Lendahand.
+    }}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://playbrush.io}{Project: Playbrush}}
+  {\textsc{Vienna, Austria}} {%
+  \headedsubsection
+    {Backend Developer}
+    {Apr \apo19 -- Now}
+    {\bodytext{Playbrush is a business with a recurring payments platform. They offer electric toothbrushes packed with technology to aid in brushing correctly. Playbrush offers dental plans for the entire family. \\
+    Their shop runs on Shopify, and a custom app was (\emph{and} is still being) developed in Ruby on Rails to interface with Shopify and handle recurring payments with \href{https://www.stripe.com}{Stripe}. This custom app allows European payment methods to be used. Stripe's new Billing platform is utilized to store subscription information. PayPal is also integrated into Stripe Billing by utilizing Braintree's API and Stripe out-of-band invoicing.
+    }}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://parfumado.com}{Project: Parfumado}}
+  {\textsc{Amsterdam, The Netherlands}} {%
+  \headedsubsection
+    {Full-Stack Developer}
+    {Jun \apo18 -- Now}
+    {\bodytext{Parfumado is also a business with a recurring payments platform. They offer a wide choice of perfumes which are delivered monthly. At already 15 thousand active customers (and growing), their business is running strong. \\
+    Their shop runs on Shopify, and a custom app was developed in Ruby on Rails to interface with Shopify and handle recurring payments with \href{https://www.mollie.com}{Mollie}. Frontend interactive elements were developed using \acr{Vue.JS}.
+    }}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://www.abelsensors.com/industries/smart-parking}{Project: Abel Sensors}}
+  {\textsc{Delft, The Netherlands}} {%
+  \headedsubsection
+    {Full-Stack Developer}
+    {Apr \apo17 -- Jan \apo18}
+    {\bodytext{Abel develops smart and wireless IoT sensors and services for remote monitoring. Their monitoring services provide an admin interface written in Laravel with a custom Javascript frontend.
+    Using these sensors and monitoring services, bike parking zones and occupancy rate is fully digitalized with image recognition and a robust Laravel API. Every single parking spot can be monitored on a map for an multiple train stations in the Netherlands.
+    }}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://vakmedianet.nl}{Project: Vakmedianet}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Full-Stack Developer}
+    {Feb \apo17 -- Apr \apo19}
+    {\bodytext{Vakmedianet is a print- and online-based magazine outlet. In total, there are 48 different magazines that are run through Vakmedianet. During this freelance work, together with Hoppinger (former workplace), 27 different websites were built and hosted in a \emph{Ruby on Rails} frontend, and \emph{Wordpress} backend.
+    These 27 sites were built to be as user friendly as possible for editors. Hence the choice for Wordpress. And for scalability and user subscription management, viewing online articles, a Rails frontend was built with core functionality for these 27 sites living in a separate shared library.
+    }}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.hoppinger.com}{Hoppinger}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Full time web developer}
+    {Mar \apo15 -- Apr \apo16}
+    {\bodytext{Hoppinger is an open source minded ``full-service'' internet agency.  Working on a project tightly with a team, producing websites built on frameworks and \acr{CMS}s like \emph{Drupal}, \emph{Wordpress}, \emph{Ruby on Rails} and \emph{Symphony}. At Hoppinger, learnt the DevOps principle in developing, testing and deploying code on multiple environments, all through the commmand line on the Linux terminal.}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.erasmusmc.nl}{Erasmus MC Viroscience department}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Bioinformatics internship}
+    {Sep \apo14 -- Mar \apo15}
+    {\bodytext{Erasmus MC is a medical faculty and hospital in Rotterdam. The Viroscience department researches known and unknown viruses. During the internship, a project was worked on to apply data mining and machine learning on large DNA databases to learn and classify an algorithm to detect known and unkown viral DNA sequences. The distributed data platform Hadoop was used, together with computation frameworks \emph{MapReduce} and \emph{Spark}. The \emph{Artifical Neural Network} machine learning algorithm was researched in depth.}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://www.portofrotterdam.com/en}{Port of Rotterdam}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Data architect}
+    {Nov \apo13 -- Feb \apo14}
+    {\bodytext{The Port of Rotterdam provides functional and nautical operational information for a fast and secure arrival and departure from the Port. For school, we were given a large data set of ship track information (\acr{appr.} 120 \acr{GB}) and had to use \emph{Big Data} frameworks to create a map of ship  greenhouse gas emmisions during their track through the Port of Rotterdam.}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.hoppinger.com}{Hoppinger}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Part time web developer and an internship}
+    {Mar \apo12 -- Sep \apo14}
+    {\bodytext{Hoppinger is an open source minded ``full-service'' internet agency.  Working on a project tightly with a team, producing websites built on frameworks and \acr{CMS}s like \emph{Drupal}, \emph{Wordpress}, \emph{Ruby on Rails} and \emph{Symphony}. At Hoppinger, learnt the DevOps principle in developing, testing and deploying code on multiple environments, all through the commmand line on the Linux terminal.}}
+}
+
+\vspace{-0.2em}
+\begin{center}
+  %\emph{\small Please refer to my \href{http://www.linkedin.com/in/tolgapaksoy}{Linked-in profile} for a more complete list of work experiences along with recommendations.}
+\end{center}
+
+\newpage
+
+\spacedhrule{-0.2em}{-0.4em}
+
+\roottitle{Education}
+
+\headedsection
+  {\href{http://www.rotterdamuniversity.com}{Rotterdam University of Applied Sciences}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Bachelor degree in Computer Science}
+    {2011 -- 2015}
+    {\bodytext{Applied knowledge of Web frameworks like \emph{Ruby on Rails} and \emph{Symfony} for developing school projects. Finished the minor \emph{Big Data/Open Data}. Picked up basic functional programming skills, primarily using \emph{Haskell}, to expand his programming language list.}}
+}
+
+\headedsection
+  {\href{http://www.tudelft.nl/en}{Technical University Delft}}
+  {\textsc{Delft, The Netherlands}} {%
+  \headedsubsection
+    {Computer Science \textnormal{\textit{~(discontinued)}}}
+    {2010 -- 2011} {}
+}
+
+\headedsection
+  {\href{http://www.lyceumschravenlant.nl}{Lyceum Schravenlant}}
+  {\textsc{Schiedam, The Netherlands}} {%
+  \headedsubsection
+    {\acr{VWO} \textnormal{~(pre-university secondary education)}}
+    {2004 -- 2010} {}
+}
+
+
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Skills}
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Technical expertise:}
+  {8 years of software design and implementation, with(in) a team. Agile methodologies (Scrum and Kanban), automated deployment and continuous integration (Hudson/Jenkins). Shopify Custom App Development. Recurring business models. Distributed solutions using Hadoop together with MapReduce and Spark. Enjoys writing Elm/\nsp Haskell/\nsp Ruby/\nsp  Java/\nsp Android. Linux administration skills:\ Bash, Nginx, Docker,  My\acr{SQL}, Postgre\acr{SQL}}
+
+\vspace{0.5em}
+\inlineheadsection
+  {Natural languages:}
+  {Dutch \emph{(country)}, English \emph{(full professional proficiency)}, Turkish \emph{(mother tongue)}, German \emph{(limited proficiency)}.}
+
+
+\spacedhrule{1.6em}{-0.4em}
+
+\roottitle{Interests}
+
+\inlineheadsection
+  {Non-exhaustive and in alphabetical order:}
+  {Android, Big Data, football/soccer, music, open source, software engineering (methodologies), typography (e.g.\ graphic design, \LaTeX)}
+
+
+\end{document}
